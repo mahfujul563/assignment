@@ -1,0 +1,736 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*--------------
+Common Css
+--------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ---------
+HEADER CSS
+-------- */
+#header{
+    background-color: #000000;
+    padding: 12px 0;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.inner_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu_bar{
+   background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+.menu_bar span{
+    color: #fff;
+    font-size: 35px;
+}
+
+nav{
+
+}
+nav ul {
+    display: flex;
+    list-style: none;
+
+}
+nav ul li {
+    padding: 10px 0 10px 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s;
+    letter-spacing: 0.4px;
+    position: relative; 
+    text-transform: uppercase;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    transition: 0.3s;
+    bottom: -8px;
+ 
+ }
+ nav ul li:hover a::after{
+     width: 100%;
+ 
+ }
+
+ /* =============== 
+     BANNER CSS
+ =============*/
+   #banner{ 
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    height: 600px;
+    /* margin-top: 10px; */
+    flex-wrap: wrap;
+    background:linear-gradient( 180deg, #008aff, #22181c), url(./../images/backgraound.jpg);
+    background-blend-mode: screen;
+   }
+ 
+   .inner_banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .personal_information{
+    flex-basis: 50%;
+   }
+   .personal_information h2{
+    font-size: 70px;
+    line-height: 1;
+   }
+   .personal_information span{
+    color: #0000ff;
+    font-size: 55px;
+   }
+   h3{
+    font-size: 20px;
+    line-height: 1.7;
+    color: #222222;
+    margin-top: 25px;
+   }
+   p{
+    font-size: 20px;
+    line-height: 1.7;
+    color: #222222;
+   }
+  
+   .personal_image{
+    display: flex;
+   }
+   .avatar{}
+   .avatar img{
+    height: 350px;
+    width: 300px;
+    /* border: 10px solid #34b7a7; */
+    border-radius: 50%;
+   }
+   .inner_banner a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #0000ff;
+    text-decoration: none;
+}
+
+/* =============
+    ABOUT CSS
+=========== */
+#about{
+    font-weight: 600;
+}
+h3.title { 
+   font-size: 60px;
+   text-align: center;
+   font-weight: 600;
+}
+.description {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+}
+
+.description::after{
+    /* height: 3px; */
+    content: "";
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    background-color: #0000ff;
+    left: 50%;
+    bottom: -8px;
+     transform: translateX(-50%); 
+}
+
+
+.information{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    
+}
+
+.information .about_info{
+    margin-top: -87px;
+}
+.about_heading{
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.about_description {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    /* margin: 20px 0; */
+}
+.information ul{
+     /* margin-top: 40px;  */
+}
+.information ul li{
+    list-style: none;
+    margin-bottom: 25px;
+    
+}
+.information ul li span{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.avatar_1 img {
+    height: 500px;
+    width: 537px;
+    border-radius: 2px 2px 2px 2px;
+    margin-top: 40px;
+}
+
+/* ===============
+    SERVICE CSS
+================*/
+#service{
+   margin-top: 60px; 
+}
+
+.service_title{
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.service_description{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+}
+
+.service_description::after{
+    content: "";
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    background-color: #0000ff;
+    left: 50%;
+    bottom: -8px;
+     transform: translateX(-50%); 
+}
+
+
+.inner_service{
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 25px;
+}
+
+.inner_service .service_box {
+    flex-basis: 32%;
+    background-color: #a09999;
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+.inner_service .service_box span{
+    display: block;
+    font-size: 40px;
+    width: 90px;
+    height: 90px;
+    border: 3px solid #999;
+    margin: auto;
+    text-align: center;
+    line-height: 90px;
+    color:  #0000ff;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    background-color: transparent;
+    transition: 0.7s ease;
+}
+
+.inner_service .service_box:hover span{
+    background-color:  #606867;
+    border-color:  #0000ff;
+}
+
+.inner_service .service_box  i{
+    font-size: 40px;
+    transform: rotate(-45deg);
+}
+
+.inner_service h4{
+    font-size:20px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.inner_service p{
+    text-align: center;
+    color: black;
+    line-height: 25px;
+}
+
+
+/* ===============
+    PORTFOLIO CSS
+================*/
+
+#portfolio{
+   width: 100%;
+   margin-top: 60px;
+}
+#portfolio .container{}
+.portfolio_title{
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600;
+}
+.portfolio_description{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+}
+.portfolio_description::after{
+    content: "";
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    background-color: #0000ff;
+    left: 50%;
+    bottom: -8px;
+     transform: translateX(-50%); 
+}
+.inner_portfolio{
+    margin: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 30px;
+}
+.portfolio_box{
+    flex-basis: 32%;
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.portfolio_box .img{
+    height: 235px;
+    width: 100%;
+    overflow: hidden;
+   
+}
+.portfolio_box .img img{
+    width: 100%;
+    transition: 0.5s;
+}
+.portfolio_box:hover .img img{
+   transform: scale(1.2);
+}
+.portfolio_box .details{
+    padding-top: 32px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.portfolio_box .details .content h6{
+    font-size: 22px;
+    color: #1e1e1e;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.portfolio_box .details .content p{
+    color: #4e4e4e;
+    font-size: 12px;
+}
+.portfolio_box .details .content p span{
+    color: #0000ff;
+}
+ .portfolio_box .details > a{
+    background-color: unset;
+    border: none;
+    outline: none;
+    color: #0000ff;
+    border: 2px solid #0000ff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+} 
+.portfolio_box .details .content a i {
+    font-size: 32px;
+
+}
+
+/* ============
+BLOG CSS
+============*/
+#blog{
+    margin-top: 60px;
+}
+.container{}
+.blog_title{
+    font-size: 60px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+}
+.blog_title::after{
+    content: "";
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    background-color: #0000ff;
+    left: 50%;
+    bottom: -8px;
+     transform: translateX(-50%); 
+}
+.inner_blog{
+    margin: 64px;
+    display: flex;
+    column-gap: 2%;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+.inner_blog .blog_box{
+    flex-basis: 32%;
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.inner_blog .blog_box .img img{
+    width: 100%;
+}
+
+.inner_blog .blog_box .details .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    padding: 2px 2px;
+}
+.inner_blog .blog_box .details a{
+    text-decoration: none;
+    padding: 8px 25px;
+    border: 1px solid #0000ff;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #0000ff;
+}
+
+.inner_blog .blog_box .details a:hover{
+    background-color: #0000ff;
+    color: #fff;
+}
+
+
+/* ============
+CONTACT CSS
+============*/
+
+#contact{
+    margin-top: 20px;
+}
+.contact_title{
+      text-align: center;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 900;
+    /* color: #0000ff; */
+}
+.contact_description{
+        text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #091E3E;
+    position: relative;
+}
+.contact_description::after{
+      content: "";
+    position: absolute;
+    height: 3px;
+    width: 60px;
+    background-color: #0000ff;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(-50%);
+  
+}
+.inner_contact{
+     margin-bottom: 48px;
+}
+.contact_information{
+       display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+    margin-top: 40px;
+}
+.contact_icon_call{
+        display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contact_icon_email{
+     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contact_icon{
+        width: 60px;
+    height: 60px;
+    border-radius: 2px;
+    background-color: #0000ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact_icon i{
+      color: #fff;
+    font-weight: 900;
+}
+.contact_icon_des{
+      padding-left: 24px;
+}
+.contact_icon_des p{
+      font-size: 24px;
+    font-weight: 900;
+}
+.contact_message_box{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name_email{
+     display: flex;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+}
+.contact_name{
+     padding: 0 5px;
+}
+.contact_name .name{
+    display: block;
+    width: 100%;
+    height: 49.2176px;
+    padding: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+ .contact_email{}
+ .contact_email .email{
+    display: block;
+    width: 100%;
+    height: 49.2176px;
+    padding: 24px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+ }
+ .contact_subject{}
+ .contact_subject .subject{
+    display: block;
+    width: 100%;
+    height: 49.2176px;
+    padding: 24px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+ }
+.text_area{} 
+.text_area .message{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 25px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+} 
+.send_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+.send_box .button_box{}
+.send_box .button_box .button{
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #0000ff;
+    border: 1px solid #0000ff;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 400;
+    overflow: hidden;
+}
+.send_box:hover .button_box .button{
+    background-color: #0000ff;
+    color: #fff;
+}
+
+/* ============
+ FOOTER CSS
+=============*/
+#footer{
+     background-color: #000000;
+    padding: 25px 0 15px 0;
+    
+}
+.container{}
+.inner_footer{}
+.inner_footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_footer ul li{
+    list-style: none;
+    padding:  8px;
+
+}
+.inner_footer ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-color: #fff; 
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.5s;
+    text-decoration:none ;
+    margin: 20px 0;
+
+}
+.inner_footer ul li a:hover{
+    background-color: #e8eaec;
+    font-style: 16px;
+}
+.inner_footer ul li a i{
+    display: inline-block;
+}
+.footer_items{}
+.footer_items .items_list{}
+.footer_items .items_list .list{
+    display: flex;
+}
+.footer_items .items_list .list a{
+    color: #fff;
+    text-decoration: none;
+    background-color: unset;
+}
+.footer_items .items_list .list a:hover{
+    text-decoration: underline;
+}
+.footer_items .items_list .list span{
+    margin-left: 20px;
+    color: #fff;
+    margin-top: 32px;
+}
+.footer_copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.footer_copyright p{
+     color: #fff; 
+    font-weight: 700;
+}
+

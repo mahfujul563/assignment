@@ -1,0 +1,72 @@
+/* Tablet */
+
+@media screen and (max-width:992px) {
+    nav{
+        display: none;
+    }
+
+    .menu_bar{
+        display: inline-block;
+    }
+    
+    .inner_service .service_box{
+        flex-basis: 49%;
+    }
+    .portfolio_box{
+        flex-basis: 49%;
+    }
+
+    .inner_blog .blog_box{
+        flex-basis: 49%;
+      
+    }
+    
+}
+
+
+
+/* Mobile */
+
+@media screen and (max-width:768px) {
+    nav{
+        display: none;
+    }
+
+    .menu_bar{
+        display: inline-block;
+    }
+    
+
+    .inner_service .service_box{
+        flex-basis: 100%;
+    }
+
+    .portfolio_box{
+        flex-basis: 100%;
+    }
+    
+
+    .title{
+        font-size: 48px;
+    }
+    .sub_title{
+        font-size: 22px;
+    }
+    .profile{
+        flex-direction: column;
+    }
+
+    .inner_about{
+        flex-direction: column;
+    }
+
+    .inner_blog .blog_box{
+        flex-basis: 100%;
+      
+    }
+
+    .contact_information .contact_icon_email{
+        margin-left: 187px;
+        margin-top: 20px;
+    }
+}
